@@ -34,6 +34,10 @@ public class Server {
 
         executeIt = Executors.newFixedThreadPool(1000);
 
+        if(args.length >= 1) {
+            PORT = Integer.parseInt(args[0]);
+        }
+
         new Thread(()->{
 
             Scanner scan = new Scanner(System.in);
